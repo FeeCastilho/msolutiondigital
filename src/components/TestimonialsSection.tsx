@@ -1,0 +1,71 @@
+import { useScrollReveal } from "./useScrollReveal";
+import { Star, Quote } from "lucide-react";
+
+const testimonials = [
+  {
+    name: "Ricardo Mendes",
+    role: "Dono de loja de materiais de construção",
+    text: "Em 30 dias, meu WhatsApp não parava de receber pedidos de orçamento. Triplicamos o faturamento no trimestre.",
+    initials: "RM",
+  },
+  {
+    name: "Camila Ferreira",
+    role: "Proprietária de loja de móveis planejados",
+    text: "Antes eu não aparecia no Google. Hoje sou a primeira opção quando pesquisam móveis na minha cidade.",
+    initials: "CF",
+  },
+  {
+    name: "Anderson Costa",
+    role: "Rede de material de construção — 3 unidades",
+    text: "A equipe entende nosso segmento de verdade. Resultado real, sem promessas vazias. Recomendo demais.",
+    initials: "AC",
+  },
+];
+
+const TestimonialsSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+
+  return (
+    <section className="relative py-24 lg:py-32" ref={ref}>
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 space-y-4">
+          <p className="text-primary text-sm font-semibold tracking-widest uppercase">Depoimentos</p>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold">
+            O que nossos clientes <span className="text-primary text-glow-gold">dizem</span>
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {testimonials.map((t, i) => (
+            <div
+              key={i}
+              className={`relative glass-surface rounded-2xl p-7 space-y-5 transition-all duration-500 hover:border-glow hover:shadow-[0_8px_40px_hsl(45_95%_48%/0.08)] ${
+                isVisible ? "animate-fade-up" : "opacity-0"
+              }`}
+              style={{ animationDelay: `${i * 120}ms` }}
+            >
+              <Quote className="w-8 h-8 text-primary/25 absolute top-5 right-5" />
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, j) => (
+                  <Star key={j} className="w-4 h-4 fill-primary text-primary" />
+                ))}
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">"{t.text}"</p>
+              <div className="flex items-center gap-3 pt-3 border-t border-border">
+                <div className="w-11 h-11 rounded-full bg-accent flex items-center justify-center text-xs font-bold text-accent-foreground shadow-sm">
+                  {t.initials}
+                </div>
+                <div>
+                  <p className="font-semibold text-sm">{t.name}</p>
+                  <p className="text-xs text-muted-foreground">{t.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TestimonialsSection;
