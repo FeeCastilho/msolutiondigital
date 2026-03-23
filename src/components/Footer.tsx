@@ -4,17 +4,17 @@ import { WHATSAPP_LINK, WHATSAPP_NUMBER, COMPANY_EMAIL, NAV_ITEMS } from "@/lib/
 import CircuitDecoration from "./CircuitDecoration";
 
 const SOCIAL_LINKS = [
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/msolutiondigital?igsh=MWF1M2FqeGF1ZXU3dg==", label: "Instagram" },
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
 ] as const;
 
 const SERVICE_LINKS = [
-  { label: "Google Ads Local", href: "#servicos" },
-  { label: "Google Meu Negócio", href: "#servicos" },
-  { label: "Tráfego Pago (Meta + Google)", href: "#servicos" },
-  { label: "Produção de Conteúdo", href: "#servicos" },
-  { label: "Funil de WhatsApp", href: "#servicos" },
+  { label: "Google Ads Local"},
+  { label: "Google Meu Negócio" },
+  { label: "Tráfego Pago (Meta + Google)"},
+  { label: "Produção de Conteúdo" },
+  { label: "Funil de WhatsApp"},
 ];
 
 const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
@@ -92,7 +92,7 @@ const Footer = () => (
           <ul className="space-y-2.5">
             {SERVICE_LINKS.map((s) => (
               <li key={s.label}>
-                <FooterLink href={s.href}>{s.label}</FooterLink>
+                <FooterLink href={WHATSAPP_LINK}>{s.label}</FooterLink>
               </li>
             ))}
           </ul>
