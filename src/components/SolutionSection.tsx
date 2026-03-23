@@ -1,6 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import CircuitDecoration from "./CircuitDecoration";
 import { Eye, Heart, MessageCircle } from "lucide-react";
+import { getRevealClass } from "@/lib/reveal";
 
 const pillars = [
   {
@@ -34,7 +35,7 @@ const SolutionSection = () => {
       />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className={`text-center space-y-6 mb-16 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
+        <div className={`text-center space-y-6 mb-16 ${isVisible ? "animate-reveal-scale" : "opacity-0"}`}>
           <p className="text-primary text-sm font-semibold tracking-widest uppercase">A Solução</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight max-w-4xl mx-auto">
             Nós criamos visibilidade, geramos desejo e convertemos em{" "}
@@ -52,7 +53,9 @@ const SolutionSection = () => {
             <div
               key={i}
               className={`group relative rounded-2xl p-8 lg:p-10 glass-surface border border-border/60 transition-all duration-500 hover:border-primary/30 hover:shadow-[0_8px_40px_hsl(45_95%_48%/0.12)] overflow-hidden ${
-                isVisible ? "animate-reveal-scale" : "opacity-0"
+                isVisible
+                  ? getRevealClass(i, ["animate-reveal-scale", "animate-fade-up", "animate-reveal-rotate"])
+                  : "opacity-0"
               }`}
               style={{ animationDelay: `${200 + i * 150}ms` }}
             >

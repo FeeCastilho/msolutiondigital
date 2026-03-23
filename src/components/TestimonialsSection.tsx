@@ -1,5 +1,6 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Star, Quote } from "lucide-react";
+import { getRevealClass } from "@/lib/reveal";
 import {
   Carousel,
   CarouselContent,
@@ -33,12 +34,13 @@ interface TestimonialCardProps {
   t: (typeof testimonials)[0];
   i: number;
   isVisible: boolean;
+  animationClass?: string;
 }
 
-const TestimonialCard = ({ t, i, isVisible }: TestimonialCardProps) => (
+const TestimonialCard = ({ t, i, isVisible, animationClass = "animate-reveal-scale" }: TestimonialCardProps) => (
   <div
     className={`relative glass-surface rounded-2xl p-7 space-y-5 transition-all duration-500 hover:border-glow hover:shadow-[0_8px_40px_hsl(45_95%_48%/0.1)] h-full flex flex-col ${
-      isVisible ? "animate-reveal-scale" : "opacity-0"
+      isVisible ? animationClass : "opacity-0"
     }`}
     style={{ animationDelay: `${i * 130}ms` }}
   >
@@ -76,7 +78,7 @@ const TestimonialsSection = () => {
   return (
     <section className="relative py-24 lg:py-32" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 space-y-4">
+        <div className={`text-center mb-16 space-y-4 ${isVisible ? "animate-reveal-down" : "opacity-0"}`}>
           <p className="text-primary text-sm font-semibold tracking-widest uppercase">Depoimentos</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold">
             O que nossos clientes{" "}
@@ -90,7 +92,16 @@ const TestimonialsSection = () => {
             <CarouselContent className="-ml-3">
               {testimonials.map((t, i) => (
                 <CarouselItem key={i} className="pl-3">
-                  <TestimonialCard t={t} i={i} isVisible={true} />
+                  <TestimonialCard
+                    t={t}
+                    i={i}
+                    isVisible={true}
+                    animationClass={getRevealClass(i, [
+                      "animate-reveal-scale",
+                      "animate-reveal-right",
+                      "animate-reveal-left",
+                    ])}
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -104,7 +115,17 @@ const TestimonialsSection = () => {
         {/* Desktop: 3-column grid */}
         <div className="hidden md:grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {testimonials.map((t, i) => (
-            <TestimonialCard key={i} t={t} i={i} isVisible={isVisible} />
+            <TestimonialCard
+              key={i}
+              t={t}
+              i={i}
+              isVisible={isVisible}
+              animationClass={getRevealClass(i, [
+                "animate-reveal-left",
+                "animate-reveal-scale",
+                "animate-reveal-right",
+              ])}
+            />
           ))}
         </div>
       </div>

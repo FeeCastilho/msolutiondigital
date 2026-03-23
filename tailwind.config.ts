@@ -121,6 +121,14 @@ export default {
           "0%": { opacity: "0", transform: "scale(0.92)", filter: "blur(5px)" },
           "100%": { opacity: "1", transform: "scale(1)", filter: "blur(0)" },
         },
+        "reveal-down": {
+          "0%": { opacity: "0", transform: "translateY(-22px)", filter: "blur(4px)" },
+          "100%": { opacity: "1", transform: "translateY(0)", filter: "blur(0)" },
+        },
+        "reveal-rotate": {
+          "0%": { opacity: "0", transform: "translateY(18px) rotate(-2deg) scale(0.98)", filter: "blur(5px)" },
+          "100%": { opacity: "1", transform: "translateY(0) rotate(0deg) scale(1)", filter: "blur(0)" },
+        },
         "count-up": {
           "0%": { opacity: "0", transform: "translateY(12px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
@@ -141,6 +149,8 @@ export default {
         "reveal-left": "reveal-left 0.65s cubic-bezier(0.16, 1, 0.3, 1) both",
         "reveal-right": "reveal-right 0.65s cubic-bezier(0.16, 1, 0.3, 1) both",
         "reveal-scale": "reveal-scale 0.65s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "reveal-down": "reveal-down 0.65s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "reveal-rotate": "reveal-rotate 0.75s cubic-bezier(0.16, 1, 0.3, 1) both",
         "count-up": "count-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both",
       },
     },

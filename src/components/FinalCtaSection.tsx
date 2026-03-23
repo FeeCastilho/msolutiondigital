@@ -18,16 +18,21 @@ const FinalCtaSection = () => {
         />
       </div>
 
-      <div
-        className={`container relative z-10 mx-auto px-6 text-center space-y-10 ${
-          isVisible ? "animate-reveal-scale" : "opacity-0"
-        }`}
-      >
-        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight max-w-4xl mx-auto">
+      <div className="container relative z-10 mx-auto px-6 text-center space-y-10">
+        <h2
+          className={`font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight max-w-4xl mx-auto ${
+            isVisible ? "animate-reveal-down" : "opacity-0"
+          }`}
+        >
           Quer clientes chamando no seu WhatsApp{" "}
           <span className="text-primary text-glow-gold">todos os dias?</span>
         </h2>
-        <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+        <p
+          className={`text-lg text-muted-foreground max-w-xl mx-auto ${
+            isVisible ? "animate-fade-up" : "opacity-0"
+          }`}
+          style={{ animationDelay: "120ms" }}
+        >
           Fale com um especialista agora e descubra como podemos transformar a presença digital da
           sua loja.
         </p>
@@ -35,7 +40,10 @@ const FinalCtaSection = () => {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="group inline-flex items-center gap-3 px-10 py-6 rounded-2xl bg-primary text-primary-foreground font-display font-bold text-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] animate-glow-pulse"
+          className={`group inline-flex items-center gap-3 px-10 py-6 rounded-2xl bg-primary text-primary-foreground font-display font-bold text-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] animate-glow-pulse ${
+            isVisible ? "animate-reveal-scale" : "opacity-0"
+          }`}
+          style={{ animationDelay: "240ms" }}
         >
           <MessageCircle className="w-7 h-7 transition-transform duration-300 group-hover:rotate-12" />
           FALAR COM ESPECIALISTA AGORA

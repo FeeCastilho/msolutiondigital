@@ -2,6 +2,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Crosshair, Layers, Zap, BarChart3 } from "lucide-react";
 import CircuitDecoration from "./CircuitDecoration";
 import GoogleIcon from "./GoogleIcon";
+import { getRevealClass } from "@/lib/reveal";
 
 const steps = [
   { icon: Crosshair, num: "01", title: "Diagnóstico", desc: "Analisamos sua loja, concorrência local e oportunidades reais na região.", color: "from-blue-500/20 to-blue-600/10" },
@@ -18,7 +19,7 @@ const MethodSection = () => {
       <CircuitDecoration className="absolute top-0 left-10 h-[180px] w-10 opacity-15 hidden lg:block" />
 
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 space-y-4">
+        <div className={`text-center mb-16 space-y-4 ${isVisible ? "animate-reveal-right" : "opacity-0"}`}>
           <p className="text-primary text-sm font-semibold tracking-widest uppercase">Como Funciona</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold">
             Nossa <span className="text-primary text-glow-gold">metodologia</span> em 4 etapas
@@ -40,7 +41,16 @@ const MethodSection = () => {
             {steps.map((step, i) => (
               <div
                 key={i}
-                className={`group relative ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+                className={`group relative ${
+                  isVisible
+                    ? getRevealClass(i, [
+                        "animate-fade-up",
+                        "animate-reveal-down",
+                        "animate-reveal-scale",
+                        "animate-reveal-rotate",
+                      ])
+                    : "opacity-0"
+                }`}
                 style={{ animationDelay: `${i * 150}ms` }}
               >
                 {/* Card */}

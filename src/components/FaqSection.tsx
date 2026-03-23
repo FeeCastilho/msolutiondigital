@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { getRevealClass } from "@/lib/reveal";
 
 const faqs = [
   { q: "Quanto tempo leva para ver resultados?", a: "A maioria dos clientes começa a receber leads qualificados nos primeiros 7 a 14 dias após a ativação das campanhas. Resultados consistentes e escaláveis geralmente aparecem a partir do segundo mês." },
@@ -16,7 +17,7 @@ const FaqSection = () => {
   return (
     <section id="faq" className="relative py-24 lg:py-32" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className={`max-w-3xl mx-auto ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
+        <div className={`max-w-3xl mx-auto ${isVisible ? "animate-reveal-right" : "opacity-0"}`}>
           <div className="text-center mb-12 space-y-4">
             <p className="text-primary text-sm font-semibold tracking-widest uppercase">Dúvidas</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold">
@@ -29,7 +30,12 @@ const FaqSection = () => {
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="glass-surface rounded-xl px-6 border-none data-[state=open]:border-glow"
+                className={`glass-surface rounded-xl px-6 border-none data-[state=open]:border-glow ${
+                  isVisible
+                    ? getRevealClass(i, ["animate-reveal-left", "animate-reveal-right", "animate-fade-up"])
+                    : "opacity-0"
+                }`}
+                style={{ animationDelay: `${120 + i * 90}ms` }}
               >
                 <AccordionTrigger className="text-left font-medium hover:text-primary hover:no-underline py-5">
                   {faq.q}

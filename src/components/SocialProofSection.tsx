@@ -2,6 +2,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useCountUp } from "@/hooks/useCountUp";
 import { TrendingUp, Users, DollarSign, Star } from "lucide-react";
 import GoogleIcon from "./GoogleIcon";
+import { getRevealClass } from "@/lib/reveal";
 
 const CountUpStat = ({ end, prefix = "", suffix = "", decimals = false, isActive }: {
   end: number; prefix?: string; suffix?: string; decimals?: boolean; isActive: boolean;
@@ -24,7 +25,7 @@ const SocialProofSection = () => {
   return (
     <section id="resultados" className="relative py-24 lg:py-32" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className={`text-center mb-16 space-y-4 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
+        <div className={`text-center mb-16 space-y-4 ${isVisible ? "animate-reveal-left" : "opacity-0"}`}>
           <p className="text-primary text-sm font-semibold tracking-widest uppercase">Resultados Reais</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold">
             Números que <span className="text-primary text-glow-gold">falam por si</span>
@@ -36,7 +37,14 @@ const SocialProofSection = () => {
             <div
               key={i}
               className={`group relative text-center glass-surface rounded-2xl p-8 border border-border/60 transition-all duration-500 hover:border-primary/30 hover:shadow-[0_8px_40px_hsl(45_95%_48%/0.12)] overflow-hidden ${
-                isVisible ? "animate-fade-up" : "opacity-0"
+                isVisible
+                  ? getRevealClass(i, [
+                      "animate-reveal-down",
+                      "animate-reveal-scale",
+                      "animate-reveal-right",
+                      "animate-reveal-left",
+                    ])
+                  : "opacity-0"
               }`}
               style={{ animationDelay: `${i * 120}ms` }}
             >

@@ -2,6 +2,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { TrendingDown, Users, Clock, DollarSign, Search, ShieldOff } from "lucide-react";
 import storeConstruction from "@/assets/store-construction.jpg";
 import storeFurniture from "@/assets/store-furniture.jpg";
+import { getRevealClass } from "@/lib/reveal";
 
 const problems = [
   { icon: TrendingDown, text: "Poucas vendas e clientes que só pesquisam preço", highlight: "Poucas vendas" },
@@ -19,7 +20,7 @@ const ProblemsSection = () => {
     <section className="relative py-24 lg:py-32" ref={ref}>
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16 space-y-4">
+        <div className={`text-center mb-16 space-y-4 ${isVisible ? "animate-reveal-down" : "opacity-0"}`}>
           <p className="text-primary text-sm font-semibold tracking-widest uppercase">Você se identifica?</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold">
             Sua loja de construção ou móveis{" "}
@@ -28,8 +29,8 @@ const ProblemsSection = () => {
         </div>
 
         {/* Store images showcase */}
-        <div className={`grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
-          <div className="relative group rounded-2xl overflow-hidden shadow-lg">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
+          <div className={`relative group rounded-2xl overflow-hidden shadow-lg ${isVisible ? "animate-reveal-left" : "opacity-0"}`}>
             <img
               src={storeConstruction}
               alt="Loja de material de construção"
@@ -46,7 +47,10 @@ const ProblemsSection = () => {
               </p>
             </div>
           </div>
-          <div className="relative group rounded-2xl overflow-hidden shadow-lg" style={{ animationDelay: "150ms" }}>
+          <div
+            className={`relative group rounded-2xl overflow-hidden shadow-lg ${isVisible ? "animate-reveal-right" : "opacity-0"}`}
+            style={{ animationDelay: "150ms" }}
+          >
             <img
               src={storeFurniture}
               alt="Loja de móveis"
@@ -71,7 +75,9 @@ const ProblemsSection = () => {
             <div
               key={i}
               className={`group relative rounded-2xl p-px cursor-default transition-all duration-500 ${
-                isVisible ? "animate-fade-up" : "opacity-0"
+                isVisible
+                  ? getRevealClass(i, ["animate-fade-up", "animate-reveal-scale", "animate-reveal-right"])
+                  : "opacity-0"
               }`}
               style={{ animationDelay: `${200 + i * 100}ms` }}
             >
