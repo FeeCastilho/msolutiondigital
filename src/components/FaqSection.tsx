@@ -1,5 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { useScrollReveal } from "./useScrollReveal";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const faqs = [
   { q: "Quanto tempo leva para ver resultados?", a: "A maioria dos clientes começa a receber leads qualificados nos primeiros 7 a 14 dias após a ativação das campanhas. Resultados consistentes e escaláveis geralmente aparecem a partir do segundo mês." },

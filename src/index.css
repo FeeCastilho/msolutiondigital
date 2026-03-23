@@ -48,6 +48,12 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    /* offset anchors so the fixed header doesn't obscure section headings */
+    scroll-padding-top: 6rem;
+  }
+
   * {
     @apply border-border;
   }

@@ -109,6 +109,22 @@ export default {
           "0%": { strokeDashoffset: "20" },
           "100%": { strokeDashoffset: "0" },
         },
+        "reveal-left": {
+          "0%": { opacity: "0", transform: "translateX(-28px)", filter: "blur(4px)" },
+          "100%": { opacity: "1", transform: "translateX(0)", filter: "blur(0)" },
+        },
+        "reveal-right": {
+          "0%": { opacity: "0", transform: "translateX(28px)", filter: "blur(4px)" },
+          "100%": { opacity: "1", transform: "translateX(0)", filter: "blur(0)" },
+        },
+        "reveal-scale": {
+          "0%": { opacity: "0", transform: "scale(0.92)", filter: "blur(5px)" },
+          "100%": { opacity: "1", transform: "scale(1)", filter: "blur(0)" },
+        },
+        "count-up": {
+          "0%": { opacity: "0", transform: "translateY(12px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -122,6 +138,10 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "circuit-dash": "circuit-dash 2s linear forwards",
         "circuit-travel": "circuit-travel 1s linear infinite",
+        "reveal-left": "reveal-left 0.65s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "reveal-right": "reveal-right 0.65s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "reveal-scale": "reveal-scale 0.65s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "count-up": "count-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both",
       },
     },
   },

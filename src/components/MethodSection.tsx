@@ -1,4 +1,4 @@
-import { useScrollReveal } from "./useScrollReveal";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Crosshair, Layers, Zap, BarChart3 } from "lucide-react";
 import CircuitDecoration from "./CircuitDecoration";
 

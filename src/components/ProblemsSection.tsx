@@ -1,4 +1,4 @@
-import { useScrollReveal } from "./useScrollReveal";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { TrendingDown, Users, Clock, DollarSign, Search, ShieldOff } from "lucide-react";
 import storeConstruction from "@/assets/store-construction.jpg";
 import storeFurniture from "@/assets/store-furniture.jpg";
@@ -33,6 +33,7 @@ const ProblemsSection = () => {
             <img
               src={storeConstruction}
               alt="Loja de material de construção"
+              loading="lazy"
               className="w-full h-56 sm:h-64 object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-accent/80 via-accent/20 to-transparent" />
@@ -49,6 +50,7 @@ const ProblemsSection = () => {
             <img
               src={storeFurniture}
               alt="Loja de móveis"
+              loading="lazy"
               className="w-full h-56 sm:h-64 object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-accent/80 via-accent/20 to-transparent" />

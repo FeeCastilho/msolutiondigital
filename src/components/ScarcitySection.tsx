@@ -1,4 +1,4 @@
-import { useScrollReveal } from "./useScrollReveal";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { AlertTriangle } from "lucide-react";
 
 const ScarcitySection = () => {

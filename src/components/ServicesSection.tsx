@@ -1,4 +1,4 @@
-import { useScrollReveal } from "./useScrollReveal";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Target, MapPin, BarChart, Globe, Palette, Store } from "lucide-react";
 import CircuitDecoration from "./CircuitDecoration";
 import storeConstruction from "@/assets/store-construction.jpg";
@@ -40,10 +40,12 @@ const ServicesSection = () => {
         <div className="text-center mb-20 space-y-4">
           <p className="text-primary text-sm font-semibold tracking-widest uppercase">Serviços</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold">
-            Soluções sob medida para <span className="text-primary">seu segmento</span>
+            Soluções sob medida para{" "}
+            <span className="text-primary">seu segmento</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Estratégias específicas para cada tipo de loja — porque vender cimento é diferente de vender sofás.
+            Estratégias específicas para cada tipo de loja — porque vender cimento é diferente de
+            vender sofás.
           </p>
         </div>
 
@@ -52,15 +54,20 @@ const ServicesSection = () => {
             <div
               key={i}
               className={`relative group bg-card rounded-3xl overflow-hidden border border-border shadow-[0_2px_20px_hsl(220_20%_50%/0.06)] transition-all duration-700 hover:border-primary/30 hover:shadow-[0_8px_40px_hsl(45_95%_48%/0.1)] ${
-                isVisible ? "animate-fade-up" : "opacity-0"
+                isVisible
+                  ? i === 0
+                    ? "animate-reveal-left"
+                    : "animate-reveal-right"
+                  : "opacity-0"
               }`}
-              style={{ animationDelay: `${i * 200}ms` }}
+              style={{ animationDelay: `${i * 150}ms` }}
             >
               {/* Image header */}
               <div className="relative h-56 sm:h-64 overflow-hidden">
                 <img
                   src={block.image}
                   alt={block.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_25%_12%)] via-[hsl(220_25%_12%/0.5)] to-transparent" />
@@ -74,7 +81,9 @@ const ServicesSection = () => {
 
               {/* Services list */}
               <div className="px-6 sm:px-8 py-6 space-y-3">
-                <p className="text-xs font-semibold text-primary tracking-widest uppercase mb-4">O que fazemos</p>
+                <p className="text-xs font-semibold text-primary tracking-widest uppercase mb-4">
+                  O que fazemos
+                </p>
                 {block.services.map((s, j) => (
                   <div
                     key={j}

@@ -1,8 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import CircuitDecoration from "./CircuitDecoration";
-import { useScrollReveal } from "./useScrollReveal";
-
-const WHATSAPP_LINK = "https://wa.me/5511930093582?text=Olá! Quero falar com um especialista da M Solution Digital";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 const FinalCtaSection = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -13,17 +12,24 @@ const FinalCtaSection = () => {
       <CircuitDecoration className="absolute bottom-0 right-20 h-[180px] w-10 opacity-15 hidden lg:block rotate-180" />
 
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full opacity-[0.08]"
-          style={{ background: "radial-gradient(circle, hsl(215 55% 30%) 0%, transparent 70%)" }} />
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full opacity-[0.08]"
+          style={{ background: "radial-gradient(circle, hsl(215 55% 30%) 0%, transparent 70%)" }}
+        />
       </div>
 
-      <div className={`container relative z-10 mx-auto px-6 text-center space-y-10 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
+      <div
+        className={`container relative z-10 mx-auto px-6 text-center space-y-10 ${
+          isVisible ? "animate-reveal-scale" : "opacity-0"
+        }`}
+      >
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight max-w-4xl mx-auto">
           Quer clientes chamando no seu WhatsApp{" "}
           <span className="text-primary text-glow-gold">todos os dias?</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-          Fale com um especialista agora e descubra como podemos transformar a presença digital da sua loja.
+          Fale com um especialista agora e descubra como podemos transformar a presença digital da
+          sua loja.
         </p>
         <a
           href={WHATSAPP_LINK}

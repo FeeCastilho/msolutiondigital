@@ -1,4 +1,4 @@
-import { useScrollReveal } from "./useScrollReveal";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import CircuitDecoration from "./CircuitDecoration";
 import { Eye, Heart, MessageCircle } from "lucide-react";
 
@@ -40,22 +40,23 @@ const SolutionSection = () => {
             Nós criamos visibilidade, geramos desejo e convertemos em{" "}
             <span className="text-primary text-glow-gold">clientes reais</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto" style={{ textWrap: "pretty" as any }}>
-            Sua loja de material de construção ou móveis merece ser encontrada por quem está pronto para comprar.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+            Sua loja de material de construção ou móveis merece ser encontrada por quem está pronto
+            para comprar.
           </p>
         </div>
 
-        {/* 3 Pillar Cards */}
+        {/* 3 Pillar Cards — scale reveal with stagger */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {pillars.map((pillar, i) => (
             <div
               key={i}
               className={`group relative rounded-2xl p-8 lg:p-10 glass-surface border border-border/60 transition-all duration-500 hover:border-primary/30 hover:shadow-[0_8px_40px_hsl(45_95%_48%/0.12)] overflow-hidden ${
-                isVisible ? "animate-fade-up" : "opacity-0"
+                isVisible ? "animate-reveal-scale" : "opacity-0"
               }`}
               style={{ animationDelay: `${200 + i * 150}ms` }}
             >
-              {/* Number background */}
+              {/* Large background number */}
               <span className="absolute -top-4 -right-2 font-display text-[7rem] font-bold text-foreground/[0.03] leading-none select-none transition-colors duration-500 group-hover:text-primary/[0.06]">
                 0{i + 1}
               </span>
@@ -81,15 +82,19 @@ const SolutionSection = () => {
           ))}
         </div>
 
-        {/* Connecting flow arrows (desktop only) */}
+        {/* Connecting dots (desktop only) */}
         <div className="hidden md:flex items-center justify-center gap-4 mt-10">
           {pillars.map((_, i) => (
             <div key={i} className="flex items-center gap-4">
-              <div className={`w-3 h-3 rounded-full bg-primary/40 ${isVisible ? "animate-fade-in" : "opacity-0"}`}
-                style={{ animationDelay: `${800 + i * 200}ms` }} />
+              <div
+                className={`w-3 h-3 rounded-full bg-primary/40 ${isVisible ? "animate-fade-in" : "opacity-0"}`}
+                style={{ animationDelay: `${800 + i * 200}ms` }}
+              />
               {i < pillars.length - 1 && (
-                <div className={`w-20 lg:w-32 h-[2px] bg-gradient-to-r from-primary/30 to-primary/10 ${isVisible ? "animate-fade-in" : "opacity-0"}`}
-                  style={{ animationDelay: `${900 + i * 200}ms` }} />
+                <div
+                  className={`w-20 lg:w-32 h-[2px] bg-gradient-to-r from-primary/30 to-primary/10 ${isVisible ? "animate-fade-in" : "opacity-0"}`}
+                  style={{ animationDelay: `${900 + i * 200}ms` }}
+                />
               )}
             </div>
           ))}
