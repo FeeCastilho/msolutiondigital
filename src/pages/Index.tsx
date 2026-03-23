@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ProblemsSection from "@/components/ProblemsSection";
 import SolutionSection from "@/components/SolutionSection";
+import BeforeAfterSection from "@/components/BeforeAfterSection";
 import MethodSection from "@/components/MethodSection";
 import ServicesSection from "@/components/ServicesSection";
 import SocialProofSection from "@/components/SocialProofSection";
@@ -26,6 +27,8 @@ const Index = () => {
       </div>
       <SectionDivider />
       <SolutionSection />
+      <SectionDivider />
+      <BeforeAfterSection />
       <SectionDivider />
       <div className="bg-muted/40">
         <MethodSection />

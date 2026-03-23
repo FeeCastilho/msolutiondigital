@@ -1,0 +1,51 @@
+<svg width="900" height="675" viewBox="0 0 900 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="675" fill="url(#bg)"/>
+  <rect x="0" y="520" width="900" height="155" fill="url(#floor)"/>
+  <path d="M120 180H250V495H120V180Z" fill="#23324E" fill-opacity="0.9"/>
+  <path d="M650 180H780V495H650V180Z" fill="#23324E" fill-opacity="0.92"/>
+  <path d="M315 150H585V515H315V150Z" fill="#1D2740" fill-opacity="0.96" stroke="#495B84" stroke-width="3"/>
+  <path d="M342 194H558" stroke="#5F739D" stroke-width="6" stroke-linecap="round"/>
+  <path d="M342 255H558" stroke="#5F739D" stroke-width="6" stroke-linecap="round"/>
+  <path d="M342 316H558" stroke="#5F739D" stroke-width="6" stroke-linecap="round"/>
+  <path d="M342 377H558" stroke="#5F739D" stroke-width="6" stroke-linecap="round"/>
+  <path d="M342 438H558" stroke="#5F739D" stroke-width="6" stroke-linecap="round"/>
+  <rect x="345" y="206" width="42" height="26" rx="4" fill="#788BB3" fill-opacity="0.25"/>
+  <rect x="398" y="206" width="66" height="26" rx="4" fill="#788BB3" fill-opacity="0.18"/>
+  <rect x="474" y="206" width="36" height="26" rx="4" fill="#788BB3" fill-opacity="0.25"/>
+  <rect x="345" y="267" width="52" height="26" rx="4" fill="#788BB3" fill-opacity="0.2"/>
+  <rect x="406" y="267" width="37" height="26" rx="4" fill="#788BB3" fill-opacity="0.26"/>
+  <rect x="453" y="267" width="57" height="26" rx="4" fill="#788BB3" fill-opacity="0.18"/>
+  <rect x="345" y="328" width="39" height="26" rx="4" fill="#788BB3" fill-opacity="0.22"/>
+  <rect x="392" y="328" width="76" height="26" rx="4" fill="#788BB3" fill-opacity="0.16"/>
+  <rect x="478" y="328" width="32" height="26" rx="4" fill="#788BB3" fill-opacity="0.24"/>
+  <rect x="345" y="389" width="60" height="26" rx="4" fill="#788BB3" fill-opacity="0.19"/>
+  <rect x="413" y="389" width="48" height="26" rx="4" fill="#788BB3" fill-opacity="0.24"/>
+  <rect x="469" y="389" width="41" height="26" rx="4" fill="#788BB3" fill-opacity="0.18"/>
+  <rect x="345" y="450" width="71" height="26" rx="4" fill="#788BB3" fill-opacity="0.14"/>
+  <rect x="424" y="450" width="38" height="26" rx="4" fill="#788BB3" fill-opacity="0.22"/>
+  <rect x="470" y="450" width="40" height="26" rx="4" fill="#788BB3" fill-opacity="0.18"/>
+  <rect x="88" y="152" width="140" height="30" rx="15" fill="#0E1525" fill-opacity="0.7" stroke="#44506E"/>
+  <text x="158" y="172" text-anchor="middle" fill="#D4DBEA" font-family="Arial, sans-serif" font-size="16" font-weight="700">SEM MOVIMENTO</text>
+  <rect x="606" y="96" width="210" height="58" rx="18" fill="#121B2E" fill-opacity="0.8" stroke="#48597C"/>
+  <text x="711" y="131" text-anchor="middle" fill="#EFF4FF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Loja vazia</text>
+  <text x="711" y="154" text-anchor="middle" fill="#AAB6CF" font-family="Arial, sans-serif" font-size="16">pouco fluxo e pouca atencao</text>
+  <circle cx="450" cy="89" r="39" fill="#1E2A43" stroke="#526688" stroke-width="2"/>
+  <path d="M435 78C435 69.716 441.716 63 450 63C458.284 63 465 69.716 465 78V88H435V78Z" fill="#95A3C0"/>
+  <path d="M430 94H470V96C470 107.046 461.046 116 450 116C438.954 116 430 107.046 430 96V94Z" fill="#95A3C0"/>
+  <path d="M439 102C442.333 106 446 108 450 108C454 108 457.667 106 461 102" stroke="#1D2740" stroke-width="3" stroke-linecap="round"/>
+  <path d="M0 0H900V675H0V0Z" fill="url(#fade)"/>
+  <defs>
+    <linearGradient id="bg" x1="450" y1="0" x2="450" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#31415E"/>
+      <stop offset="1" stop-color="#161E31"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="450" y1="520" x2="450" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24314D"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="450" y1="0" x2="450" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="black" stop-opacity="0.22"/>
+    </linearGradient>
+  </defs>
+</svg>

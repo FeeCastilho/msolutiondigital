@@ -162,7 +162,6 @@ const HeroSection = () => {
                   loading="eager"
                 />
               </div>
-
               <CircuitDecoration className="absolute -top-8 -right-6 h-[120px] w-8 opacity-30 rotate-[30deg]" />
               <CircuitDecoration className="absolute -bottom-8 -left-6 h-[120px] w-8 opacity-20 rotate-[-20deg]" />
             </div>
