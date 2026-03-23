@@ -1,7 +1,9 @@
 import { Instagram, Facebook, Linkedin, MessageCircle, Mail, MapPin } from "lucide-react";
 import logoVertical from "@/assets/logo-vertical.png";
 import { WHATSAPP_LINK, WHATSAPP_NUMBER, COMPANY_EMAIL, NAV_ITEMS } from "@/lib/constants";
+import { isExternalLink } from "@/lib/links";
 import CircuitDecoration from "./CircuitDecoration";
+import GoogleIcon from "./GoogleIcon";
 
 const SOCIAL_LINKS = [
   { icon: Instagram, href: "https://www.instagram.com/msolutiondigital?igsh=MWF1M2FqeGF1ZXU3dg==", label: "Instagram" },
@@ -17,15 +19,21 @@ const SERVICE_LINKS = [
   { label: "Funil de WhatsApp"},
 ];
 
-const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a
-    href={href}
-    className="group flex items-center gap-2 text-sm text-accent-foreground/55 hover:text-primary transition-all duration-300"
-  >
-    <span className="w-1 h-1 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-125 transition-all duration-300 shrink-0" />
-    {children}
-  </a>
-);
+const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+  const external = isExternalLink(href);
+
+  return (
+    <a
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      className="group flex items-center gap-2 text-sm text-accent-foreground/55 hover:text-primary transition-all duration-300"
+    >
+      <span className="w-1 h-1 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-125 transition-all duration-300 shrink-0" />
+      {children}
+    </a>
+  );
+};
 
 const Footer = () => (
   <footer className="relative bg-accent overflow-hidden">
@@ -92,7 +100,12 @@ const Footer = () => (
           <ul className="space-y-2.5">
             {SERVICE_LINKS.map((s) => (
               <li key={s.label}>
-                <FooterLink href={WHATSAPP_LINK}>{s.label}</FooterLink>
+                <FooterLink href={WHATSAPP_LINK}>
+                  <span className="inline-flex items-center gap-2">
+                    {s.label.includes("Google") ? <GoogleIcon className="h-4 w-4 shrink-0" /> : null}
+                    <span>{s.label}</span>
+                  </span>
+                </FooterLink>
               </li>
             ))}
           </ul>
@@ -115,6 +128,8 @@ const Footer = () => (
             </a>
             <a
               href={`mailto:${COMPANY_EMAIL}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 text-sm text-accent-foreground/55 hover:text-primary transition-all duration-300 group"
             >
               <Mail className="w-4 h-4 shrink-0 text-primary/50 group-hover:text-primary transition-colors" />

@@ -1,6 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Crosshair, Layers, Zap, BarChart3 } from "lucide-react";
 import CircuitDecoration from "./CircuitDecoration";
+import GoogleIcon from "./GoogleIcon";
 
 const steps = [
   { icon: Crosshair, num: "01", title: "Diagnóstico", desc: "Analisamos sua loja, concorrência local e oportunidades reais na região.", color: "from-blue-500/20 to-blue-600/10" },
@@ -62,7 +63,16 @@ const MethodSection = () => {
                     </div>
 
                     <h3 className="font-display text-xl font-bold text-foreground">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {step.num === "03" ? (
+                        <span className="inline-flex items-center gap-1.5">
+                          <GoogleIcon className="w-4 h-4 shrink-0" />
+                          <span>{step.desc}</span>
+                        </span>
+                      ) : (
+                        step.desc
+                      )}
+                    </p>
                   </div>
 
                   {/* Bottom accent */}

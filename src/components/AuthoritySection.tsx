@@ -38,6 +38,10 @@ const AuthoritySection = () => {
                 Nosso time combina tecnologia, dados e criatividade para entregar o que importa —
                 clientes reais no seu WhatsApp, prontos para comprar.
               </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Atuamos no mercado digital desde 2018, ajudando empresas a vender mais todos os
+                dias com estratégia, posicionamento e foco em resultado.
+              </p>
             </div>
 
             {/* Right — slides in from right */}

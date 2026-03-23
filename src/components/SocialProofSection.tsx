@@ -1,6 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useCountUp } from "@/hooks/useCountUp";
 import { TrendingUp, Users, DollarSign, Star } from "lucide-react";
+import GoogleIcon from "./GoogleIcon";
 
 const CountUpStat = ({ end, prefix = "", suffix = "", decimals = false, isActive }: {
   end: number; prefix?: string; suffix?: string; decimals?: boolean; isActive: boolean;
@@ -55,7 +56,16 @@ const SocialProofSection = () => {
                     isActive={isVisible}
                   />
                 </p>
-                <p className="text-sm text-muted-foreground mt-3">{stat.label}</p>
+                <p className="text-sm text-muted-foreground mt-3">
+                  {stat.label.includes("Google") ? (
+                    <span className="inline-flex items-center gap-1.5">
+                      <GoogleIcon className="w-4 h-4 shrink-0" />
+                      <span>{stat.label}</span>
+                    </span>
+                  ) : (
+                    stat.label
+                  )}
+                </p>
               </div>
 
               {/* Bottom accent */}

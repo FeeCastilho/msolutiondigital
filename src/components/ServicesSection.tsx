@@ -1,6 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Target, MapPin, BarChart, Globe, Palette, Store } from "lucide-react";
 import CircuitDecoration from "./CircuitDecoration";
+import GoogleIcon from "./GoogleIcon";
 import storeConstruction from "@/assets/store-construction.jpg";
 import storeFurniture from "@/assets/store-furniture.jpg";
 
@@ -90,7 +91,11 @@ const ServicesSection = () => {
                     className="flex items-start gap-4 p-3.5 rounded-xl bg-muted/50 border border-transparent transition-all duration-300 hover:bg-primary/[0.06] hover:border-primary/15"
                   >
                     <div className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <s.icon className="w-4 h-4 text-primary" />
+                      {s.name.includes("Google") ? (
+                        <GoogleIcon className="w-4 h-4" />
+                      ) : (
+                        <s.icon className="w-4 h-4 text-primary" />
+                      )}
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-foreground">{s.name}</p>
