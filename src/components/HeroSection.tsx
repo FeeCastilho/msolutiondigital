@@ -1,4 +1,5 @@
 import logoVertical from "@/assets/logo-vertical.png";
+import heroPortrait from "@/assets/hero-portrait.png";
 import CircuitDecoration from "./CircuitDecoration";
 import GoogleIcon from "./GoogleIcon";
 import { useParallax } from "@/hooks/useParallax";
@@ -22,6 +23,41 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-32 lg:pt-32">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <div
+          className="absolute inset-y-0 right-[-10rem] w-[26rem] sm:right-[-8rem] sm:w-[32rem] md:right-[-6rem] md:w-[36rem] lg:right-[-4rem] lg:w-[40rem] xl:right-0 xl:w-[44rem]"
+          style={{ transform: `translateY(${-slowY * 0.35}px)` }}
+        >
+          <img
+            src={heroPortrait}
+            alt=""
+            className="absolute bottom-0 right-0 h-[72%] w-auto max-w-none object-contain opacity-20 sm:h-[78%] sm:opacity-28 md:h-[84%] lg:h-[90%] lg:opacity-70 xl:h-[96%]"
+            loading="eager"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, hsl(var(--background)) 0%, hsl(var(--background)) 26%, hsl(var(--background) / 0.92) 42%, transparent 68%)",
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 0%, transparent 68%, hsl(var(--background) / 0.3) 88%, hsl(var(--background) / 0.72) 100%)",
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(circle at 36% 30%, hsl(45 95% 52% / 0.14), transparent 34%)",
+            }}
+          />
+        </div>
+      </div>
+
       {/* Circuit decorations with parallax */}
       <CircuitDecoration
         className="absolute top-20 left-8 h-[300px] w-10 opacity-40 hidden lg:block"
@@ -35,6 +71,7 @@ const HeroSection = () => {
         className="absolute bottom-20 left-[20%] h-[200px] w-10 opacity-15 hidden lg:block"
         style={{ transform: `translateY(${slowY * 0.5}px)` }}
       />
+
 
       {/* Energy lines SVG */}
       <div className="absolute inset-0 pointer-events-none">

@@ -4,7 +4,7 @@ export const WHATSAPP_LINK =
   `${WA_BASE}?text=${encodeURIComponent("Olá! Quero falar com um especialista da M Solution Digital")}`;
 
 export const WHATSAPP_LINK_GOOGLE =
-  `${WA_BASE}?text=${encodeURIComponent("Olá! Quero melhorar meu posicionamento no Google")}`;
+  `${WA_BASE}?text=${encodeURIComponent("Quero melhorar meu posicionamento no Google")}`;
 
 export const WHATSAPP_LINK_SOCIAL =
   `${WA_BASE}?text=${encodeURIComponent("Olá! Quero crescer nas redes sociais")}`;
