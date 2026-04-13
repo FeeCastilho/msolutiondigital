@@ -1,8 +1,20 @@
-import { MessageCircle } from "lucide-react";
 import logoVertical from "@/assets/logo-vertical.png";
 import CircuitDecoration from "./CircuitDecoration";
+import GoogleIcon from "./GoogleIcon";
 import { useParallax } from "@/hooks/useParallax";
-import { WHATSAPP_LINK } from "@/lib/constants";
+import { WHATSAPP_LINK_GOOGLE } from "@/lib/constants";
+
+/** "Google" with official brand colors on each letter */
+const GoogleColoredText = () => (
+  <span className="whitespace-nowrap">
+    <span style={{ color: "#4285F4" }}>G</span>
+    <span style={{ color: "#EA4335" }}>o</span>
+    <span style={{ color: "#FBBC05" }}>o</span>
+    <span style={{ color: "#4285F4" }}>g</span>
+    <span style={{ color: "#34A853" }}>l</span>
+    <span style={{ color: "#EA4335" }}>e</span>
+  </span>
+);
 
 const HeroSection = () => {
   const slowY = useParallax(0.04);
@@ -70,14 +82,15 @@ const HeroSection = () => {
               </span>
             </div>
 
-            {/* Headline */}
+            {/* Headline — "Google" with brand colors */}
             <h1
               className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.95] tracking-tight opacity-0 animate-fade-up"
               style={{ animationDelay: "150ms", animationFillMode: "forwards" }}
             >
-              Transformamos sua{" "}
-              <span className="text-primary text-glow-gold">loja</span>{" "}
-              em uma máquina de clientes no WhatsApp
+              Colocamos sua{" "}
+              <span className="text-primary text-glow-gold">empresa</span>{" "}
+              na primeira página do{" "}
+              <GoogleColoredText />
             </h1>
 
             {/* Body */}
@@ -85,22 +98,29 @@ const HeroSection = () => {
               className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed text-pretty opacity-0 animate-fade-up"
               style={{ animationDelay: "300ms", animationFillMode: "forwards" }}
             >
-              Estratégia, tecnologia e posicionamento digital para lojas de{" "}
+              Estratégia e posicionamento orgânico para lojas de{" "}
               <span className="text-foreground font-medium">material de construção</span> e{" "}
-              <span className="text-foreground font-medium">móveis</span> que querem vender mais
+              <span className="text-foreground font-medium">móveis</span> que querem gerar clientes
               todos os dias.
             </p>
 
-            {/* CTA */}
+            {/* CTA — Google focus */}
             <a
-              href={WHATSAPP_LINK}
+              href={WHATSAPP_LINK_GOOGLE}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 px-8 py-5 rounded-xl bg-primary text-primary-foreground font-display font-bold text-lg transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] animate-glow-pulse opacity-0"
-              style={{ animationDelay: "450ms", animationFillMode: "forwards", animation: "glow-pulse 2s ease-in-out infinite, fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 450ms both" }}
+              className="group inline-flex items-center gap-3 px-8 py-5 rounded-xl bg-primary text-primary-foreground font-display font-bold text-lg transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] opacity-0"
+              style={{
+                animationDelay: "450ms",
+                animationFillMode: "forwards",
+                animation:
+                  "glow-pulse 2s ease-in-out infinite, fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 450ms both",
+              }}
             >
-              <MessageCircle className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12" />
-              FALAR COM ESPECIALISTA NO WHATSAPP
+              <span className="flex items-center justify-center w-6 h-6 bg-white rounded-full shrink-0 shadow-sm">
+                <GoogleIcon className="w-4 h-4" />
+              </span>
+              QUERO MELHORAR MEU POSICIONAMENTO NO GOOGLE
             </a>
 
             {/* Social proof */}
@@ -119,13 +139,13 @@ const HeroSection = () => {
                 ))}
               </div>
               <p className="text-sm text-muted-foreground">
-                <span className="text-foreground font-semibold">+127 lojas</span> já confiam no
+                <span className="text-foreground font-semibold">+900 empresas</span> já confiam no
                 nosso trabalho
               </p>
             </div>
           </div>
 
-          {/* Right — scale reveal */}
+          {/* Right — logo + orbiting rings (original) */}
           <div className="relative hidden lg:flex items-center justify-center">
             <div
               className="relative w-[420px] h-[420px] xl:w-[480px] xl:h-[480px] opacity-0 animate-reveal-scale"

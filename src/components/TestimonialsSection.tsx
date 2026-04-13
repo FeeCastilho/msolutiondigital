@@ -11,22 +11,22 @@ import {
 
 const testimonials = [
   {
-    name: "Ricardo Mendes",
+    name: "Ricardo",
     role: "Dono de loja de materiais de construção",
-    text: "Em 30 dias, meu WhatsApp não parava de receber pedidos de orçamento. Triplicamos o faturamento no trimestre.",
-    initials: "RM",
+    text: "Em 15 dias, meu WhatsApp não parava de receber pedidos de orçamento. Triplicamos o faturamento no trimestre.",
+    initials: "R",
   },
   {
-    name: "Camila Ferreira",
-    role: "Proprietária de loja de móveis planejados",
+    name: "Andreza",
+    role: "Proprietária de loja de móveis e eletro",
     text: "Antes eu não aparecia no Google. Hoje sou a primeira opção quando pesquisam móveis na minha cidade.",
-    initials: "CF",
+    initials: "A",
   },
   {
-    name: "Anderson Costa",
-    role: "Rede de material de construção — 3 unidades",
+    name: "Rafael",
+    role: "Dono de loja de materiais de construção",
     text: "A equipe entende nosso segmento de verdade. Resultado real, sem promessas vazias. Recomendo demais.",
-    initials: "AC",
+    initials: "R",
   },
 ];
 

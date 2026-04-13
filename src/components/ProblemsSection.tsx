@@ -6,7 +6,7 @@ import { getRevealClass } from "@/lib/reveal";
 
 const problems = [
   { icon: TrendingDown, text: "Poucas vendas e clientes que só pesquisam preço", highlight: "Poucas vendas" },
-  { icon: Users, text: "Clientes não encontram sua loja no Google", highlight: "não encontram" },
+  { icon: Users, text: "Clientes não encontram sua empresa no Google", highlight: "não encontram" },
   { icon: Clock, text: "Investimento em panfleto e rádio sem retorno", highlight: "sem retorno" },
   { icon: DollarSign, text: "Concorrentes grandes dominando a região", highlight: "dominando" },
   { icon: Search, text: "WhatsApp parado — sem mensagens de clientes novos", highlight: "WhatsApp parado" },

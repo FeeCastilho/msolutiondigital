@@ -8,7 +8,6 @@ import GoogleIcon from "./GoogleIcon";
 const SOCIAL_LINKS = [
   { icon: Instagram, href: "https://www.instagram.com/msolutiondigital?igsh=MWF1M2FqeGF1ZXU3dg==", label: "Instagram" },
   { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
 ] as const;
 
 const SERVICE_LINKS = [

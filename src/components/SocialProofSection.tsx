@@ -14,9 +14,9 @@ const CountUpStat = ({ end, prefix = "", suffix = "", decimals = false, isActive
 
 const stats = [
   { end: 300, prefix: "+", suffix: "%", label: "Aumento médio em leads", icon: TrendingUp },
-  { end: 127, prefix: "", suffix: "+", label: "Lojas atendidas", icon: Users },
+  { end: 900, prefix: "", suffix: "+", label: "Empresas atendidas", icon: Users },
   { end: 2.4, prefix: "R$", suffix: "M", label: "Faturamento gerado", icon: DollarSign, decimals: true },
-  { end: 4.9, prefix: "", suffix: "★", label: "Avaliação no Google", icon: Star, decimals: true },
+  { end: 5.0, prefix: "", suffix: "★", label: "Avaliação no Google", icon: Star, decimals: true },
 ];
 
 const SocialProofSection = () => {

@@ -1,6 +1,7 @@
 import CircuitBackground from "@/components/CircuitBackground";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import GoogleSocialSection from "@/components/GoogleSocialSection";
 import ProblemsSection from "@/components/ProblemsSection";
 import SolutionSection from "@/components/SolutionSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
@@ -21,6 +22,8 @@ const Index = () => {
       <CircuitBackground />
       <Header />
       <HeroSection />
+      <SectionDivider />
+      <GoogleSocialSection />
       <SectionDivider />
       <div className="bg-muted/40">
         <ProblemsSection />
