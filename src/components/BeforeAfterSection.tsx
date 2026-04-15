@@ -16,8 +16,8 @@ const sliders = [
     afterImage: afterStore,
     beforeAlt: "Loja vazia sem clientes",
     afterAlt: "Loja cheia de clientes e movimento",
-    beforeLabel: "Sem a M Solution",
-    afterLabel: "Com a M Solution",
+    beforeLabel: "Sem a M Solution Digital",
+    afterLabel: "Com a M Solution Digital",
     initialPosition: 50,
   },
   {
@@ -28,8 +28,8 @@ const sliders = [
     afterImage: afterWhatsApp,
     beforeAlt: "WhatsApp sem mensagens",
     afterAlt: "WhatsApp lotado de mensagens",
-    beforeLabel: "Sem a M Solution",
-    afterLabel: "Com a M Solution",
+    beforeLabel: "Sem a M Solution Digital",
+    afterLabel: "Com a M Solution Digital",
     initialPosition: 50,
   },
 ] as const;
@@ -64,7 +64,7 @@ const BeforeAfterSection = () => {
             Veja a diferenca que <span className="text-primary text-glow-gold">fazemos</span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Arraste o controle e compare a realidade sem a M Solution com o resultado de uma
+            Arraste o controle e compare a realidade sem a M Solution Digital com o resultado de uma
             operacao que gera movimento na loja e conversas no WhatsApp.
           </p>
           <div className="flex items-center justify-center gap-2 pt-1">

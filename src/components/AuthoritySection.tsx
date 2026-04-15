@@ -2,9 +2,9 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Shield, Target, Cpu, Award } from "lucide-react";
 
 const highlights = [
-  { icon: Target, title: "Foco absoluto", desc: "Só atendemos lojas de construção e móveis" },
+  { icon: Target, title: "Foco absoluto", desc: "Só atendemos lojas de construção , móveis e eletro" },
   { icon: Cpu, title: "Tecnologia + dados", desc: "Decisões baseadas em métricas reais" },
-  { icon: Shield, title: "Método validado", desc: "Resultados comprovados em 127+ lojas" },
+  { icon: Shield, title: "Método validado", desc: "Resultados comprovados em 900+ lojas" },
   { icon: Award, title: "Time especialista", desc: "Profissionais que vivem o segmento" },
 ];
 
@@ -27,11 +27,11 @@ const AuthoritySection = () => {
               <p className="text-primary text-sm font-semibold tracking-widest uppercase">Sobre nós</p>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
                 Somos especialistas em transformar{" "}
-                <span className="text-primary text-glow-gold">lojas em referência digital</span>
+                <span className="text-primary text-glow-gold">empresas em referência digital</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
                 A M Solution Digital nasceu focada em um único segmento: lojas de material de
-                construção e lojas de móveis. Conhecemos os desafios, o público e as oportunidades
+                construção , lojas de móveis e eletro. Conhecemos os desafios, o público e as oportunidades
                 desse mercado como ninguém.
               </p>
               <p className="text-muted-foreground leading-relaxed">

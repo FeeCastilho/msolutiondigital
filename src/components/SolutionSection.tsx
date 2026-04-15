@@ -42,7 +42,7 @@ const SolutionSection = () => {
             <span className="text-primary text-glow-gold">clientes reais</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Sua loja de material de construção ou móveis merece aparecer no Google antes dos concorrentes
+            Sua loja de material de construção , móveis e eletro merece aparecer no Google antes dos concorrentes
             — e gerar clientes todos os dias.
           </p>
         </div>

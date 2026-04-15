@@ -31,8 +31,8 @@ const services = [
     desc: "Presença ativa, conteúdo estratégico e audiência engajada nas redes sociais que seus clientes usam.",
     points: [
       "Planejamento e calendário editorial",
-      "Criação de posts, stories e reels",
-      "Gestão de comentários e mensagens",
+      "Criação de posts e reels",
+      "Configuração personalizada da rede social",
     ],
   },
   {
@@ -189,7 +189,7 @@ const ServicesSection = () => {
 
               <p className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-snug">
                 Tudo isso com o{" "}
-                <span className="text-primary">método da M Solution</span>
+                <span className="text-primary">MÉTODO da M Solution Digital</span>
               </p>
               <p className="text-white/60 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
                 Uma solução integrada de ponta a ponta — sem precisar contratar várias agências

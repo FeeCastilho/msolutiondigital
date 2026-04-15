@@ -23,7 +23,7 @@ const ProblemsSection = () => {
         <div className={`text-center mb-16 space-y-4 ${isVisible ? "animate-reveal-down" : "opacity-0"}`}>
           <p className="text-primary text-sm font-semibold tracking-widest uppercase">Você se identifica?</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold">
-            Sua loja de construção ou móveis{" "}
+            Sua loja de construção, móveis e eletro{" "}
             <span className="text-primary text-glow-gold">enfrenta isso?</span>
           </h2>
         </div>
@@ -60,10 +60,10 @@ const ProblemsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-accent/80 via-accent/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6">
               <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/90 text-primary-foreground text-xs font-bold uppercase tracking-wider">
-                🛋️ Lojas de Móveis
+                🛋️ Lojas de Móveis e Eletro
               </span>
               <p className="text-white/90 text-sm mt-2 font-medium">
-                Conectamos lojas de móveis com clientes prontos para comprar
+                Conectamos lojas de móveis e eletro com clientes prontos para comprar
               </p>
             </div>
           </div>

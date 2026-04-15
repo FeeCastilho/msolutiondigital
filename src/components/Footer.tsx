@@ -56,7 +56,7 @@ const Footer = () => (
             loading="lazy"
           />
           <p className="text-accent-foreground/60 text-sm leading-relaxed max-w-[260px]">
-            Especialistas em marketing digital para lojas de material de construção e móveis.
+            Especialistas em marketing digital para lojas de material de construção , móveis e eletro.
             Resultados reais. WhatsApp cheio de clientes.
           </p>
 
