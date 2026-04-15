@@ -1,0 +1,65 @@
+<svg width="900" height="675" viewBox="0 0 900 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="675" fill="url(#bg)"/>
+  <rect x="0" y="520" width="900" height="155" fill="url(#floor)"/>
+  <path d="M120 172H250V500H120V172Z" fill="#1D3154" fill-opacity="0.9"/>
+  <path d="M650 172H780V500H650V172Z" fill="#1D3154" fill-opacity="0.92"/>
+  <path d="M315 138H585V520H315V138Z" fill="#14253F" fill-opacity="0.96" stroke="#D9A51D" stroke-width="3"/>
+  <path d="M342 188H558" stroke="#D8A10C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M342 251H558" stroke="#D8A10C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M342 314H558" stroke="#D8A10C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M342 377H558" stroke="#D8A10C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M342 440H558" stroke="#D8A10C" stroke-width="6" stroke-linecap="round"/>
+  <rect x="345" y="198" width="42" height="30" rx="4" fill="#FFE79A"/>
+  <rect x="394" y="198" width="66" height="30" rx="4" fill="#F0B52B"/>
+  <rect x="469" y="198" width="44" height="30" rx="4" fill="#FFD773"/>
+  <rect x="345" y="261" width="61" height="30" rx="4" fill="#F7C958"/>
+  <rect x="414" y="261" width="45" height="30" rx="4" fill="#FCE39B"/>
+  <rect x="467" y="261" width="46" height="30" rx="4" fill="#E6AE2C"/>
+  <rect x="345" y="324" width="39" height="30" rx="4" fill="#FFD773"/>
+  <rect x="392" y="324" width="83" height="30" rx="4" fill="#F8CF66"/>
+  <rect x="483" y="324" width="30" height="30" rx="4" fill="#FCE39B"/>
+  <rect x="345" y="387" width="55" height="30" rx="4" fill="#F7C958"/>
+  <rect x="408" y="387" width="42" height="30" rx="4" fill="#FFE79A"/>
+  <rect x="458" y="387" width="55" height="30" rx="4" fill="#E8B52E"/>
+  <rect x="345" y="450" width="74" height="30" rx="4" fill="#FFE79A"/>
+  <rect x="427" y="450" width="37" height="30" rx="4" fill="#F3BE3C"/>
+  <rect x="472" y="450" width="41" height="30" rx="4" fill="#FFD773"/>
+  <circle cx="208" cy="412" r="36" fill="#192941"/>
+  <rect x="184" y="448" width="48" height="62" rx="18" fill="#192941"/>
+  <circle cx="298" cy="390" r="30" fill="#304D75"/>
+  <rect x="278" y="420" width="40" height="76" rx="18" fill="#304D75"/>
+  <circle cx="601" cy="398" r="34" fill="#1A2A44"/>
+  <rect x="578" y="432" width="46" height="72" rx="18" fill="#1A2A44"/>
+  <circle cx="700" cy="418" r="28" fill="#35567F"/>
+  <rect x="681" y="445" width="38" height="58" rx="16" fill="#35567F"/>
+  <circle cx="519" cy="424" r="26" fill="#F0B52B"/>
+  <rect x="501" y="449" width="36" height="52" rx="15" fill="#F0B52B"/>
+  <rect x="84" y="146" width="176" height="34" rx="17" fill="#0E1525" fill-opacity="0.62" stroke="#E1B23A"/>
+  <text x="172" y="168" text-anchor="middle" fill="#FFF6DA" font-family="Arial, sans-serif" font-size="17" font-weight="700">LOJA EM MOVIMENTO</text>
+  <rect x="568" y="82" width="248" height="86" rx="22" fill="#10213A" fill-opacity="0.82" stroke="#E2B545" stroke-width="2"/>
+  <text x="692" y="122" text-anchor="middle" fill="#FFF8E6" font-family="Arial, sans-serif" font-size="30" font-weight="700">Loja cheia</text>
+  <text x="692" y="152" text-anchor="middle" fill="#F3D98C" font-family="Arial, sans-serif" font-size="18">mais fluxo, mais atencao e mais clientes</text>
+  <circle cx="450" cy="88" r="42" fill="#FFF3D1"/>
+  <path d="M433 79C433 69.6112 440.611 62 450 62C459.389 62 467 69.6112 467 79V90H433V79Z" fill="#E0B43A"/>
+  <path d="M428 96H472V98C472 110.15 462.15 120 450 120C437.85 120 428 110.15 428 98V96Z" fill="#E0B43A"/>
+  <path d="M440 102C443.6 106.8 446.933 109.2 450 109.2C453.067 109.2 456.4 106.8 460 102" stroke="#8B5E00" stroke-width="3.2" stroke-linecap="round"/>
+  <circle cx="166" cy="254" r="10" fill="#F0B52B"/>
+  <circle cx="736" cy="232" r="8" fill="#FFE79A"/>
+  <circle cx="596" cy="260" r="6" fill="#F7C958"/>
+  <path d="M0 0H900V675H0V0Z" fill="url(#glow)"/>
+  <defs>
+    <linearGradient id="bg" x1="450" y1="0" x2="450" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#26436D"/>
+      <stop offset="0.58" stop-color="#1B3154"/>
+      <stop offset="1" stop-color="#12223C"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="450" y1="520" x2="450" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#203759"/>
+      <stop offset="1" stop-color="#13233C"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(450 180) rotate(90) scale(320 540)">
+      <stop stop-color="#F1C24E" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
