@@ -30,7 +30,7 @@ const AuthoritySection = () => {
                 <span className="text-primary text-glow-gold">empresas em referência digital</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-                A M Solution Digital nasceu focada em um único segmento: lojas de material de
+                A M Solution Digital se especializou no segmento de lojas de material para
                 construção , lojas de móveis e eletro. Conhecemos os desafios, o público e as oportunidades
                 desse mercado como ninguém.
               </p>

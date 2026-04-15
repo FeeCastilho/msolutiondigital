@@ -115,7 +115,7 @@ const HeroSection = () => {
             >
               <div className="circuit-dot" style={{ width: 6, height: 6 }} />
               <span className="text-sm text-muted-foreground tracking-wider uppercase">
-                Especialistas em Lojas de Construção e Móveis
+                Especialistas em Lojas de Construção , Móveis e Eletro
               </span>
             </div>
 
