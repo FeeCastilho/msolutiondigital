@@ -2,7 +2,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Shield, Target, Cpu, Award } from "lucide-react";
 
 const highlights = [
-  { icon: Target, title: "Foco absoluto", desc: "Só atendemos lojas de construção , móveis e eletro" },
+  { icon: Target, title: "Foco absoluto", desc: "Só atendemos lojas de construção , lojas de móveis e eletro" },
   { icon: Cpu, title: "Tecnologia + dados", desc: "Decisões baseadas em métricas reais" },
   { icon: Shield, title: "Método validado", desc: "Resultados comprovados em 900+ lojas" },
   { icon: Award, title: "Time especialista", desc: "Profissionais que vivem o segmento" },

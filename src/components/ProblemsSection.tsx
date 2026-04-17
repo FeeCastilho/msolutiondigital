@@ -23,7 +23,7 @@ const ProblemsSection = () => {
         <div className={`text-center mb-16 space-y-4 ${isVisible ? "animate-reveal-down" : "opacity-0"}`}>
           <p className="text-primary text-sm font-semibold tracking-widest uppercase">Você se identifica?</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold">
-            Sua loja de construção, móveis e eletro{" "}
+            Sua loja de construção ou loja de móveis e eletro{" "}
             <span className="text-primary text-glow-gold">enfrenta isso?</span>
           </h2>
         </div>

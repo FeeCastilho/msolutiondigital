@@ -4,7 +4,7 @@ import { getRevealClass } from "@/lib/reveal";
 
 const faqs = [
   { q: "Quanto tempo leva para ver resultados?", a: "A maioria dos clientes começa a receber leads qualificados nos primeiros 7 a 14 dias após a ativação das campanhas." },
-  { q: "Funciona para lojas de material de construção, móveis e eletro?", a: "Sim! Nosso trabalho é 100% focado nesses dois segmentos. Conhecemos o comportamento do consumidor que busca materiais de obra, acabamentos, móveis e decoração — e sabemos como atraí-los via Google, Instagram e WhatsApp." },
+  { q: "Funciona para lojas de material de construção, lojas de móveis e eletro?", a: "Sim! Nosso trabalho é 100% focado nesses dois segmentos. Conhecemos o comportamento do consumidor que busca materiais de obra, acabamentos, móveis e decoração — e sabemos como atraí-los via Google, Instagram e WhatsApp." },
   { q: "Preciso ter experiência com marketing digital?", a: "Não. Cuidamos de toda a estratégia, criação e gestão. Você só precisa atender os clientes que chegam no seu WhatsApp." },
   { q: "E se eu já tentei anunciar e não deu certo?", a: "A maioria dos lojistas que nos procura já tentou por conta própria ou com agências genéricas. Nosso diferencial é a especialização no segmento de construção e móveis, com nosso método validado e focado em conversão via WhatsApp." },
   { q: "Qual o investimento necessário?", a: "Apresentamos os valores e planos na consultoria gratuita, pois o investimento varia conforme o segmento, região e objetivos. Chame no WhatsApp para uma proposta personalizada." },
